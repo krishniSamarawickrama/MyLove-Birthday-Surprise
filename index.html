@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday My Love ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- FALLING HEARTS -->
+    <div id="fallingHeartContainer"></div>
+
+    <!-- BACKGROUND MUSIC -->
+    <div class="music-player">
+        <button id="musicToggle" onclick="toggleMusic()">🎵 Play Music</button>
+
+        <audio id="backgroundMusic" loop preload="auto">
+            <source src="./Music/WhatsApp Audio 2026-11-21 at 12.44.37 PM.mpeg" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- PAGE 1 : WELCOME -->
+    <section id="welcomePage" class="page active">
+        <div class="welcome-card">
+            <div class="gift">🎁</div>
+            <h1>Hey My Love!</h1>
+            <p>I have something special for you...</p>
+            <p class="small-text">A little surprise made with lots of love ❤️</p>
+            <button onclick="openPinPage()">Open Your Surprise 💌</button>
+        </div>
+    </section>
+
+    <!-- PAGE 2 : PIN LOCK -->
+    <section id="pinPage" class="page">
+        <div class="pin-card">
+            <div class="lock-icon">🔐</div>
+            <h1>Only For You</h1>
+            <p>Enter your birthday to unlock your surprise ❤️</p>
+
+            <input
+                type="password"
+                id="pinInput"
+                maxlength="8"
+                placeholder="DDMMYYYY"
+                inputmode="numeric"
+            >
+
+            <p id="pinMessage"></p>
+            <button onclick="checkPin()">Unlock ❤️</button>
+        </div>
+    </section>
+
+    <!-- PAGE 3 : MEMORIES -->
+    <section id="memoriesPage" class="page">
+        <div class="memories-container">
+            <h1>Our Beautiful Memories 💙</h1>
+
+            <p class="memory-text">
+                Every picture tells a beautiful story of us.
+            </p>
+
+            <div class="slideshow">
+
+                <img
+                    class="memory-slide active-slide"
+                    src="./photo/photo1.png"
+                    alt="Our beautiful memory 1"
+                >
+
+                <img
+                    class="memory-slide"
+                    src="./photo/photo2.png"
+                    alt="Our beautiful memory 2"
+                >
+
+                <img
+                    class="memory-slide"
+                    src="./photo/photo3.png"
+                    alt="Our beautiful memory 3"
+                >
+
+                <button class="slide-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="slide-btn next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <div class="dots">
+                <span class="dot active-dot" onclick="goToSlide(0)"></span>
+                <span class="dot" onclick="goToSlide(1)"></span>
+                <span class="dot" onclick="goToSlide(2)"></span>
+            </div>
+
+            <p class="memory-caption">
+                My favourite memories are always with you. 🥺❤️
+            </p>
+
+            <button onclick="nextPage('birthdayPage')">Continue 💙</button>
+        </div>
+    </section>
+
+    <!-- PAGE 4 : BIRTHDAY CELEBRATION -->
+    <section id="birthdayPage" class="page">
+        <div class="birthday-card">
+            <div class="cake">🎂</div>
+            <h1>Happy Birthday!</h1>
+            <h2>My Dearest Love ❤️</h2>
+
+            <p>
+                Today is all about you!
+                You deserve all the happiness in the world.
+            </p>
+
+            <button onclick="celebrate()">Make A Wish ✨</button>
+            <p id="birthdayWish"></p>
+
+            <button class="letter-button" onclick="nextPage('letterPage')">
+                Read My Letter 💌
+            </button>
+        </div>
+
+        <div id="heartContainer"></div>
+    </section>
+
+    <!-- PAGE 5 : LOVE LETTER -->
+    <section id="letterPage" class="page">
+        <div class="letter-container">
+            <div class="letter-icon">💌</div>
+            <h1>My Love Letter</h1>
+
+            <p class="letter-subtitle">
+                A little letter from my heart to yours ❤️
+            </p>
+
+            <div class="letter-paper">
+                <h2>To My Dearest Sudu, ❤️</h2>
+
+                <p>Happy Birthday, my love! 🥺❤️</p>
+
+                <p>
+                    I feel so lucky to have someone like you in my life.
+                    Since the day you came into my world, you have filled
+                    my life with beautiful memories and so many reasons to smile.
+                </p>
+
+                <p>
+                    Sudu, words can never fully explain how special you are to me.
+                    Your smile, your love, the way you care about me, and even
+                    your little silly things mean more to me than you could
+                    ever imagine.
+                </p>
+
+                <p>
+                    We may have little fights, misunderstandings, and difficult
+                    days sometimes, but my love for you is always bigger than
+                    all of them. Every moment we spend together, every laugh
+                    we share, and every memory we create will always be special
+                    to me.
+                </p>
+
+                <p>
+                    My Sudu, I know you are so far away from me right now.
+                    You are working hard, building your future, and chasing
+                    your dreams. Even though I cannot be beside you during
+                    this journey, please remember that my love, support,
+                    and prayers are always with you. I am so proud of you
+                    and everything you are doing to build the life you dream of.
+                </p>
+
+                <p>
+                    I will be waiting for the day you finally come back to
+                    Sri Lanka, my love. I dream of the day when this distance
+                    between us disappears, when I can finally see you, hold
+                    you tight, and tell you how much I missed you. Until that
+                    day comes, I will keep loving you and waiting for you
+                    with all my heart. 🥺❤️
+                </p>
+
+                <p>
+                    On your special day, I wish you endless happiness,
+                    good health, success, and the strength to achieve all
+                    your dreams. May everything your heart wishes for come true.
+                    And most importantly, may that beautiful smile never leave
+                    your face.
+                </p>
+
+                <p>
+                    I hope we get to celebrate many more birthdays together,
+                    create countless beautiful memories, share our dreams,
+                    and make those dreams come true together.
+                </p>
+
+                <p>
+                    My Sudu, I love you more than words can explain.
+                    I may not always know how to express my feelings,
+                    but please remember that you will always have a very
+                    special place in my heart.
+                </p>
+
+                <h2 class="birthday-ending">
+                    Happy Birthday, My Love! 🎂💙
+                </h2>
+
+                <h2 class="love-ending">
+                    I love you so much, my Sudu. 🥺❤️
+                </h2>
+
+                <div class="signature">
+                    <p>With all my love,</p>
+                    <h2>Your Girl Forever ❤️</h2>
+                </div>
+            </div>
+
+            <button onclick="goHome()">Back To Beginning ❤️</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
